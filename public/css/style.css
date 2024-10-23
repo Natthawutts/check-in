@@ -1,0 +1,131 @@
+body{
+    background: #bae6b0;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15vh;
+}
+
+.ch{
+    margin-top: 15vh;
+}
+
+.boxmid{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px;
+    background-color: rgb(255, 255, 255);
+}
+/* #con{
+        align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1px;
+    width: 500px;
+    height: 500px;
+} */
+h1 {
+    text-align: center;
+    margin-top: 200px;
+}
+
+body{
+    background: #E2F1E7;
+}
+hr{
+    width: 100px;
+}
+
+.fname{
+    text-align: center;
+}
+
+#studentID{
+    height: 30px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+/* .btn{
+    margin-left: 150px;
+} */
+
+#bbtn{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: rgba(103, 253, 73, 0.966);
+}
+
+/* .tablee{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+} */
+.tablee {
+    width: 80%; /* กำหนดความกว้างของตาราง */
+    margin: 20px auto; /* จัดกลางหน้าจอ */
+    border-collapse: separate; /* แยกเส้นขอบ */
+    border-spacing: 10px; /* ระยะห่างระหว่างเซลล์ */
+}
+
+.tablee table {
+    width: 100%; /* กำหนดให้ตารางขยายเต็มความกว้างของ div .tablee */
+}
+
+.tablee th, .tablee td {
+    border: 1px solid #ddd; /* เส้นขอบเซลล์ */
+    padding: 12px 15px; /* เพิ่มระยะห่างภายในเซลล์ */
+    text-align: left; /* จัดข้อความไปทางซ้าย */
+}
+
+.tablee th {
+    background-color: #f2f2f2; /* สีพื้นหลังของ header */
+    color: #333; /* สีข้อความของ header */
+}
+
+.tablee tr:nth-child(even) {
+    background-color: #f9f9f9; /* สีพื้นหลังของแถวคู่ */
+}
+
+.tablee tr:hover {
+    background-color: #f1f1f1; /* เปลี่ยนสีเมื่อชี้เมาส์ไปที่แถว */
+}
+
+
+.navbar {
+    background-color: #333; /* สีพื้นหลัง */
+    overflow: hidden; /* ซ่อน overflow */
+    padding-top: 0;
+}
+
+.navbar ul {
+    list-style-type: none; /* ไม่มีจุดในรายการ */
+    margin: 0; /* ไม่มี margin */
+    padding: 0; /* ไม่มี padding */
+}
+
+.navbar li {
+    float: left; /* จัดให้อยู่ด้านซ้าย */
+}
+
+.navbar a {
+    display: block; /* ทำให้ลิงก์เป็นบล็อก */
+    color: white; /* สีข้อความ */
+    text-align: center; /* จัดกลางข้อความ */
+    padding: 14px 20px; /* ขนาดของปุ่ม */
+    text-decoration: none; /* ไม่มีเส้นใต้ */
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* สีพื้นหลังเมื่อ hover */
+    color: black; /* สีข้อความเมื่อ hover */
+}

@@ -1,0 +1,71 @@
+create database Studentlist;
+\c studentlist;
+
+
+create table student
+(id bigserial primary key,
+prefix_id int references prefix(id),
+first_name varchar(100),
+last_name varchar(100),
+date_of_birth date,
+sex varchar(20),
+curriculum_id int references curriculum(id),
+previous_school varchar(100),
+address varchar(100),
+telephone varchar(10),
+email varchar(100),
+line_id varchar(20),
+status varchar(10));
+
+
+create table prefix
+(id int primary key,
+prefix varchar(100));
+
+
+create table curriculum
+(id int primary key,
+curr_name_th varchar(100),
+curr_name_en varchar(100),
+short_name_th varchar(100),
+short_name_en varchar(100));
+
+
+create table student_list
+(id int primary key,
+section_id int references section(id),
+student_id int references student(id),
+active_date date,
+status varchar(10));
+
+create table section
+(id int primary key ,
+section varchar(10));
+
+CREATE TABLE attendance (
+    id SERIAL PRIMARY KEY,
+    student_id VARCHAR(50) NOT NULL,  -- รหัสนักศึกษา
+    check_in_date DATE NOT NULL,       -- วันที่เช็คชื่อ
+    attendance_status VARCHAR(20),      -- สถานะการเช็คชื่อ (เช่น "มาเรียน", "ขาดเรียน")
+    FOREIGN KEY (student_id) REFERENCES student(id)  -- เชื่อมโยงกับตาราง student
+);
+
+
+INSERT INTO curriculum (id, curr_name_th, curr_name_en, short_name_th, short_name_en)
+VALUES 
+(1, 'วิทยาศาสตร์บัณฑิต สาขาวิทยาการคอมพิวเตอร์', 'Bachelor of Science in Computer Science', 'วทบ.บ.(วิทยาการคอมพิวเตอร์)', 'B.Sc.(Computer Science)'),
+(2, 'วิทยาศาสตร์บัณฑิต สาขาเทคโนโลยีสารสนเทศ', 'Bachelor of Information Technology', 'วทบ.บ.(เทคโนโลยีสารสนเทศ)', 'B.Sc.(Information Technology)');
+
+
+insert into prefix (id,prefix) values
+(1,'นาย'),
+(2,'นาง');
+
+alter table student
+alter column id type varchar(50)
+
+
+to_char(check-in-date, \'YYYY-MM-DD\') AS check-in-date
+
+
+SELECT id, first_name, last_name, to_char(date_of_birth, \'YYYY-MM-DD\') AS date_of_birth, sex, status, attendance FROM student ORDER BY id

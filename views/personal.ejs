@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Student Information</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">เช็คชื่อ</a>
+                <a class="nav-item nav-link" href="/students">ดูรายชื่อนักศึกษา</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>ข้อมูลนักศึกษา</h2>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <td><%= student.id %></td>
+            </tr>
+            <tr>
+                <th>Prefix</th>
+                <td><%= student.prefix %></td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td><%= student.first_name %></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><%= student.last_name %></td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td><%= student.date_of_birth %></td>
+            </tr>
+            <tr>
+                <th>Curriculum</th>
+                <td><%= student.curr_name_th %></td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td><%= student.status %></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><%= student.address %></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%= student.email %></td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td><%= student.telephone %></td>
+            </tr>
+            
+            
+        </table>
+    </div>
+</body>
+</html>
